@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>login page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<style>
+	
+</style>
+</head>
+    <body>
+    	<script language="javascript" type="text/javascript">
+    	function check(){
+    		var name = LoginForm.username.value;
+    		var passwd =  LoginForm.password.value;
+    		if(name==""){
+    			alert("Please input the username");
+    			LoginForm.username.focus();
+    			return (false);
+    		}
+    		if(passwd==""){
+    			alert("Please input the password");
+    			LoginForm.password.focus();
+    			return(false);
+    		}
+    	}
+    	</script>
+    	<div class="center">
+    		<form action="login.php" method="post" name="LoginForm" onsubmit="return check(this)">
+    			username:<input name="username" type="text" id="username"/><br />
+    			password:<input name="password" type="password" id="password"/><br />
+    			
+    				<input type="submit" value="submit" name="submit"/>
+                    <input value="sign in" type="button" onclick="javascript:window.location.href='register.html'"/>
+
+                    <br/>
+    		</form>
+    	</div>
+    </body>
+</html>
